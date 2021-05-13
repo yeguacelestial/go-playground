@@ -69,7 +69,7 @@ func text(n *html.Node) string {
 	// extracting the text
 	var ret string
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
-		ret += text(c) + " "
+		ret += text(c)
 	}
 
 	// Remove unnecessary spaces, and join words with a single space
