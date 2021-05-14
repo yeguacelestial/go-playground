@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func parseHtmlFromUrl(url string) string {
+func ParseHtmlFromUrl(url string) string {
 	fmt.Printf("Parsing HTML from %s ...\n", url)
 
 	res, err := http.Get(url)
@@ -27,7 +27,7 @@ func parseHtmlFromUrl(url string) string {
 
 func main() {
 	url := "https://raw.githubusercontent.com/gophercises/link/master/ex1.html"
-	htmlString := parseHtmlFromUrl(url)
+	htmlString := ParseHtmlFromUrl(url)
 
 	print("HTML PARSED: \n%s", htmlString)
 }
